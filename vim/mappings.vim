@@ -50,3 +50,5 @@ if !exists(':Rename!')
 end
 
 nnoremap <leader>t :Files<CR>
+nnoremap <leader>n :noh<CR>
+nnoremap <leader>m :set number<CR>

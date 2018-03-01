@@ -52,3 +52,17 @@ end
 nnoremap <leader>t :Files<CR>
 nnoremap <leader>n :noh<CR>
 nnoremap <leader>m :set number<CR>
+nnoremap <leader>E :Exp<CR>
+
+nnoremap <F6> :checktime<CR>
+nnoremap <F7> magg=G`a
+
+command! Wa :wa
+command! WA :wa
+command! Q :q
+command! QA :qa
+command! Qa :qa
+command! Vs :vs
+command! VS :vs
+
+command! FJ %!python -m json.tool

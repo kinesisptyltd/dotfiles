@@ -94,6 +94,8 @@ set matchpairs+=<:>                          " Pairs to match.
 set matchtime=2                              " How many tenths of a second to blink
 set list                                     " Show invisible characters
 
+set colorcolumn=120                           " Show a grey column at 120 characters
+
 " Show trailing spaces as dots and carrots for extended lines.
 " From Janus, http://git.io/PLbAlw
 

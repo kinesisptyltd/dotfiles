@@ -44,6 +44,21 @@ alias npmbower='npm cache clean && bower cache clean && npm install && bower ins
 alias reinstalldep='rm -rf node_modules bower_components dist tmp && npmbower'
 alias rt='be rspec spec && be rubocop -R -a'
 alias lsaws-s='cd ~/Code/chef-repo/ && rake aws:instances && cd -'
+alias lsaws-p='cd ~/Code/chef-repo/ && ENVIRONMENT=production rake aws:instances && cd -'
+
+alias ms='mux start'
+alias ms-bouncer='ssh-add ~/.ssh/work.key && ms bouncer'
+alias ms-iw='ms integrated-web'
+alias ms-id='ms integrated-data'
+alias ms-ie2e='ms integrated-e2e-tests'
+alias ms-cw='ms city-web'
+alias ms-cd='ms city-data'
+alias ms-ce2e='ms city-e2e-tests'
+alias ms-pw='ms precinct-web'
+alias ms-pd='ms precinct-data'
+alias ms-deploy='ms deploy'
+alias tks='tmux kill-session'
+alias setup_tests='be rake db:test:prepare && be rake db:seed RAILS_ENV=test'
 
 # Functions
 repl() { perl -pi -w -e "s/$1/$2/g;" * }

@@ -24,6 +24,7 @@ command! W :w                                " Seriously, it's not like :W is bo
 set nocompatible                             " Turn off vi compatibility.
 
 set encoding=utf8                            " Always use unicode.
+set termencoding=utf8                            " Always use unicode.
 set spelllang=en_au                          " Set spell check language.
 set shortmess=aIoO                           " Show short messages, no intro.
 

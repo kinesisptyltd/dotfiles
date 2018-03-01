@@ -9,7 +9,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rake'
 Plug 'vim-ruby/vim-ruby'
 Plug 'dsawardekar/portkey' | Plug 'dsawardekar/ember.vim'
-Plug 'mustache/vim-mustache-handlebars'
+Plug 'vivekprahlad/vim-mustache-handlebars'
 Plug 'kchmck/vim-coffee-script'
 Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
@@ -41,6 +41,12 @@ Plug 'SirVer/ultisnips'
 
 Plug 'Valloric/YouCompleteMe'
 Plug 'dyng/auto_mkdir'
+Plug 'kana/vim-textobj-user'
+Plug 'tmhedberg/matchit'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-surround'
 
 " Themes
 Plug 'chriskempson/base16-vim'
@@ -65,3 +71,6 @@ function! StripTrailingWhitespace()
     endif
 endfunction
 nnoremap <leader>W :call StripTrailingWhitespace()<CR>
+
+runtime macros/matchit.vim
+let g:mustache_abbreviations = 1

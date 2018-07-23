@@ -50,6 +50,8 @@ alias rt='be rspec spec && be rubocop -R -a'
 alias lsaws-s='cd ~/Code/chef-repo/ && rake aws:instances && cd -'
 alias lsaws-p='cd ~/Code/chef-repo/ && ENVIRONMENT=production rake aws:instances && cd -'
 
+alias gdeletebranch='f() { g branch -d $1 && g push -d origin $1 };f'
+
 alias ms='mux start'
 alias ms-bouncer='ssh-add ~/.ssh/work.key && ms bouncer'
 alias ms-iw='ms integrated-web'
@@ -63,6 +65,12 @@ alias ms-pd='ms precinct-data'
 alias ms-deploy='ms deploy'
 alias tks='tmux kill-session'
 alias setup_tests='be rake db:test:prepare && be rake db:seed RAILS_ENV=test'
+
+alias k='kubectl'
+alias kubeconfig='f() { export KUBECONFIG=~/Code/kube-config/sydney-$1.config };f'
+alias kconfig='kubeconfig'
+
+alias ggwp='killall ember ruby caddy "foreman: master"; tmux kill-server'
 
 # Functions
 repl() { perl -pi -w -e "s/$1/$2/g;" * }

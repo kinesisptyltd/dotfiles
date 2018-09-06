@@ -48,6 +48,9 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-surround'
 
+Plug 'chrisbra/csv.vim'
+Plug 'airblade/vim-gitgutter'
+
 " Themes
 Plug 'chriskempson/base16-vim'
 
@@ -73,4 +76,8 @@ endfunction
 nnoremap <leader>W :call StripTrailingWhitespace()<CR>
 
 runtime macros/matchit.vim
-let g:mustache_abbreviations = 1
+
+" let g:mustache_abbreviations = 1
+
+au WinEnter * set number
+au WinLeave * set nonumber

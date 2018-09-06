@@ -29,7 +29,7 @@ if  [[ -f /usr/local/etc/profile.d/z.sh ]]; then
 fi
 
 # Aliases
-unalias gb
+# unalias gb
 alias a='tmux attach -t'
 alias g='git'
 alias v='nvim'
@@ -70,6 +70,7 @@ alias k='kubectl'
 alias kubeconfig='f() { export KUBECONFIG=~/Code/kube-config/sydney-$1.config };f'
 alias kconfig='kubeconfig'
 
+alias glhf='ssh-add ~/.ssh/work.key && ms friend'
 alias ggwp='killall ember ruby caddy "foreman: master"; tmux kill-server'
 
 # Functions
@@ -77,4 +78,11 @@ repl() { perl -pi -w -e "s/$1/$2/g;" * }
 replr() { perl -p -i -e "s/$1/$2/g" `grep -ril $1 *` }
 
 source <(kubectl completion zsh)
-source <(minikube completion zsh)
+# source <(minikube completion zsh)
+
+export WORKON_HOME=~/.virtualenvs
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+export PYENV_ROOT=~/.pyenv
+
+eval "$(pyenv init -)"
